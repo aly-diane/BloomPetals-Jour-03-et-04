@@ -1,0 +1,90 @@
+/* =========================================================
+   BloomPetals - style de la page Contact
+   ========================================================= */
+
+:root {
+  --rose: #d6336c;
+  --texte: #2b2b2b;
+  --fond: #fffafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background-color: var(--fond);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--rose);
+}
+
+/* Texte lisible par les lecteurs d'écran mais caché à l'écran */
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ---------- En-tête et menu ---------- */
+#entete {
+  background-color: #767b87;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 5%;
+}
+
+#menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+#menu a:hover,
+#menu a.actif {
+  border-bottom-color: #ffffff;
+}
+
+#recherche input {
+  width: 220px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e2e2e2;
+}
+
+/* ---------- Contenu ---------- */
+#contenu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 5%;
+}

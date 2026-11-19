@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BloomPetals - Contact</title>
+  <link rel="stylesheet" href="style cont.css">
+</head>
+<body>
+
+  <header id="entete">
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="entreprise.html">Entreprise</a></li>
+        <li><a href="realisations.html">Réalisations</a></li>
+        <li><a href="contact.html" class="actif">Contact</a></li>
+      </ul>
+      <form id="recherche" action="#">
+        <input type="search" placeholder="Rechercher" aria-label="Rechercher">
+      </form>
+    </nav>
+  </header>
+
+  <main id="contenu">
+
+    <section id="contact">
+      <h1>Contactez-nous</h1>
+      <p>Un projet, une question ? Remplissez le formulaire, nous vous répondons rapidement.</p>
+
+      <form id="formulaire" action="#" method="post">
+
+        <div class="champ">
+          <label for="civilite">Civilité</label>
+          <select id="civilite" name="civilite" required>
+            <option value="">-- Choisir --</option>
+            <option value="madame">Madame</option>
+            <option value="monsieur">Monsieur</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="champ">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" required>
+        </div>
+
+        <div class="champ">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom" required>
+        </div>
+
+        <div class="champ">
+          <label for="adresse">Adresse postale</label>
+          <input type="text" id="adresse" name="adresse" required>

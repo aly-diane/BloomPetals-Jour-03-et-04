@@ -1,0 +1,180 @@
+/* =========================================================
+   BloomPetals - style de la page Réalisations
+   ========================================================= */
+
+:root {
+  --rose: #d6336c;
+  --texte: #2b2b2b;
+  --fond: #fffafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background-color: var(--fond);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--rose);
+}
+
+/* Texte lisible par les lecteurs d'écran mais caché à l'écran */
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ---------- En-tête et menu ---------- */
+#entete {
+  background-color: #767b87;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 5%;
+}
+
+#menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+#menu a:hover,
+#menu a.actif {
+  border-bottom-color: #ffffff;
+}
+
+#recherche input {
+  width: 220px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e2e2e2;
+}
+
+/* ---------- Contenu ---------- */
+#contenu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 5%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+/* ---------- Titre de la page ---------- */
+#titre-realisations {
+  text-align: center;
+}
+
+#titre-realisations h1 {
+  color: var(--rose);
+}
+
+/* ---------- Mosaïque : Grid ---------- */
+#mosaique {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 140px;
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+
+#mosaique figure {
+  margin: 0;
+  overflow: hidden;
+  background-color: #cfcfcf;
+  border-radius: 10px;
+}
+
+#mosaique img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+#mosaique figure:hover img {
+  transform: scale(1.08);
+}
+
+/* Variantes de taille */
+#mosaique .haute {
+  grid-row: span 2;
+}
+
+#mosaique .large {
+  grid-column: span 2;
+}
+
+#mosaique .grande {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+/* ---------- Pied de page ---------- */
+#pied {
+  padding: 24px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #767b87;
+}
+
+#pied p {
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablette */
+@media (min-width: 700px) {
+  #menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #mosaique {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Ordinateur */
+@media (min-width: 1000px) {
+  #mosaique {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 160px;
+  }
+}

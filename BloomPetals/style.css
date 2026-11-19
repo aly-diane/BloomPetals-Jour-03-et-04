@@ -1,0 +1,204 @@
+/* =========================================================
+   BloomPetals - style de la page d'accueil
+   ========================================================= */
+
+:root {
+  --rose: #d6336c;
+  --texte: #2b2b2b;
+  --fond: #fffafb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background-color: var(--fond);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--rose);
+}
+
+/* Texte lisible par les lecteurs d'écran mais caché à l'écran */
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ---------- En-tête et menu ---------- */
+#entete {
+  background-color: #767b87;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 5%;
+}
+
+#menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+#menu a:hover,
+#menu a.actif {
+  border-bottom-color: #ffffff;
+}
+
+#recherche input {
+  width: 220px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: #e2e2e2;
+}
+
+/* ---------- Contenu ---------- */
+#contenu {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 5%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.logo {
+  margin: 0 0 12px;
+  text-align: center;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 3rem;
+  color: var(--rose);
+}
+
+#presentation {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+  text-align: center;
+}
+
+/* ---------- Galeries : Flexbox ---------- */
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.galerie figure {
+  flex: 1 1 200px;
+  margin: 0;
+  padding: 6px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.galerie img {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  background-color: #cfcfcf;
+}
+
+/* ---------- Services : Flexbox ---------- */
+#services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 24px 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.service {
+  flex: 1 1 240px;
+}
+
+.service h3 {
+  margin: 0 0 8px;
+  font-family: "Courier New", monospace;
+}
+
+.service h3::before {
+  content: "✔";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: #4a90c2;
+  border-radius: 50%;
+}
+
+.service p {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+}
+
+.service a {
+  font-size: 0.85rem;
+}
+
+/* ---------- Pied de page ---------- */
+#pied {
+  padding: 24px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #767b87;
+}
+
+#pied p {
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablette et plus */
+@media (min-width: 700px) {
+  #menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 4rem;
+  }
+}
